@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "llm"
+version = "0.1.0"
+description = "Just personal tests with LLM"
+authors = ["benoit-cty"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-decouple = "^3.8"
+openai = "^0.27.7"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.3.2"
+ipykernel = "^6.23.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
