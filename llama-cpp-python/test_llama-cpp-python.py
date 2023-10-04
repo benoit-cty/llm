@@ -1,6 +1,7 @@
 """
 CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install llama-cpp-python
 
+# Conversion du modèle GGML en GGUF
 /media/data-nvme/dev/src/llm/llama.cpp$ python3 convert-llama-ggmlv3-to-gguf.py -i ../llama-cpp-python/llama-2-7b-32k-instruct.ggmlv3.q2_K.bin -o ../llama-cpp-python/llama-2-7b-32k-instruct.gguf.q2_K.bin
 
 """
