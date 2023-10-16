@@ -7,7 +7,7 @@ CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install llama-cpp-python
 """
 from llama_cpp import Llama
 from time import time
-model_path="./codellama-7b-instruct.Q4_K_M.gguf"
+model_path="/media/ben/2To/dev/llm/Mistral/Mistral-7B-v0.1-GGUF/mistral-7b-v0.1.Q5_K_M.gguf"
 
 start = time()
 
@@ -17,8 +17,8 @@ lcpp_llm = Llama(
     model_path=model_path,
     n_threads=32, # CPU cores
     n_batch=512, # Should be between 1 and n_ctx, consider the amount of VRAM in your GPU.
-    n_gpu_layers=43, # Change this value based on your model and your GPU VRAM pool.
-    n_ctx=4096, # Context window
+    n_ctx=2048, # Context window
+    n_gpu_layers=50, # change n_gpu_layers if you have more or less VRAM 
 )
 
 # See the number of layers in GPU
